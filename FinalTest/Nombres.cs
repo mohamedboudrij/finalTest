@@ -19,6 +19,20 @@ namespace FinalTest
             set { NombresPairs = value; }
         }
 
+        public String TexteNombresImpairs
+        {
+            get
+            {
+                var query = keyValuePairs
+                    .Where(x => (x.Value%2 != 0))
+                    .OrderByDescending(x => x.Value)
+                    .Select(x => x.Key)
+                    .Aggregate((workingSentence, next) => next + ", " + workingSentence);
+                return query;
+            }
+            set { TexteNombresImpairs = value; }
+        }
+
         public Nombres(IEnumerable<KeyValuePair<string, int>> keyValuePairs)
         {
             this.keyValuePairs = keyValuePairs;
