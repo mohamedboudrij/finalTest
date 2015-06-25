@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FinalTest.Tests
+namespace FinalTest
 {
-    public class Multiplication
+    public class Multiplication : IOperation
     {
         public Boolean PeutCalculer(string chaine)
         {

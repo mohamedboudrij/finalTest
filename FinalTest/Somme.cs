@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using FinalTest;
 
-namespace FinalTest.Tests
+namespace FinalTest
 {
-    public class Somme
+    public class Somme : IOperation
     {
         public Boolean PeutCalculer(string chaine)
         {
