@@ -5,7 +5,8 @@ namespace FinalTest
     public class CompteBancaire
     {
         private readonly CompteCréé _compteCréé;
-        private readonly DépotRéalisé _depoDépotRéalisé;
+        private  DépotRéalisé _depoDépotRéalisé;
+        private int solde;
 
         public CompteBancaire(CompteCréé compteCréé)
         {

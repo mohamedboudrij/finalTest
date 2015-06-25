@@ -7,7 +7,7 @@ namespace FinalTest
 {
     public class Montant
     {
-        private int p;
+        public int p;
 
         public Montant(int p)
         {
