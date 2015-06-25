@@ -46,6 +46,21 @@ namespace FinalTest
             set { TexteNombresImpairs = value; }
         }
 
+        public IEnumerable<int> QuatreNombresSupérieursSuivant3
+        {
+            get
+            {
+                var query = keyValuePairs
+                    .Where(x => (x.Value > 3))
+                    .OrderBy(x => x.Value)
+                    .Skip(0)
+                    .Take(4)
+                    .Select(x => x.Value);
+                return query;
+            }
+            set { QuatreNombresSupérieursSuivant3 = value; }
+        }
+
         public Nombres(IEnumerable<KeyValuePair<string, int>> keyValuePairs)
         {
             this.keyValuePairs = keyValuePairs;
