@@ -7,7 +7,7 @@ namespace FinalTest
 {
     public struct CompteCréé : IEvenementMetier
     {
-        private string _numéroDeCompte;
+        public string _numéroDeCompte;
         private int autorisationDeCrédit;
 
         public CompteCréé(string _numéroDeCompte, int autorisationDeCrédit)
