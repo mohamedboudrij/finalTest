@@ -33,6 +33,19 @@ namespace FinalTest
             set { TexteNombresImpairs = value; }
         }
 
+        public String PremierNombreDontLeTexteContientPlusDe5Caractères
+        {
+            get
+            {
+                var query = keyValuePairs
+                    .Where(x => (x.Key.Length > 5))
+                    .Select(x => x.Key)
+                    .First();
+                return query;
+            }
+            set { TexteNombresImpairs = value; }
+        }
+
         public Nombres(IEnumerable<KeyValuePair<string, int>> keyValuePairs)
         {
             this.keyValuePairs = keyValuePairs;
